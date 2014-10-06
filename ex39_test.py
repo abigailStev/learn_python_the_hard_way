@@ -20,11 +20,15 @@ hashmap.set(cities, 'OR', 'Portland')
 
 # print out some cities
 print '-' * 10
+assert hashmap.get(cities, 'NY') == 'New York'
+assert hashmap.get(cities, 'OR') == 'Portland'
 print "NY State has: %s" % hashmap.get(cities, 'NY')
 print "OR State has %s" % hashmap.get(cities, 'OR')
 
 # print some states
 print '-' * 10
+assert hashmap.get(states, 'Michigan') == 'MI'
+assert hashmap.get(states, 'Florida') == 'FL'
 print "Michigan's abbreviation is: %s" % hashmap.get(states,'Michigan')
 print "Florida's abbreviation is: %s" % hashmap.get(states, 'Florida')
 
@@ -53,6 +57,11 @@ if not state:
 # can you do this on one line?
 city = hashmap.get(cities, 'TX', 'Does Not Exist')
 print "The city for the state 'TX' is: %s" % city
-
+print '-' * 10
 # yes I can!
 print "The city for the state 'TX' is: %s" % hashmap.get(cities, 'TX', 'Does Not Exist')
+
+# print '-' * 10
+# hashmap.dump(states)
+# print '-' * 10
+# hashmap.dump(cities)
